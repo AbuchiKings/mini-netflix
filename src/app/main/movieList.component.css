@@ -1,0 +1,79 @@
+.main>h3 {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    margin: 25px auto 30px;
+    text-align: center;
+    color: #aaaaaa;
+    padding: 5px 5px 8px;
+    border-bottom: 3px solid #bbbbbb;
+    width: fit-content;
+
+}
+
+.mov-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 3rem;
+    padding: 0;
+    justify-content: center;
+}
+
+.flyin-grid__item {
+    flex: 1 1 350px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    max-width: 400px;
+}
+
+.card {
+    margin-bottom: 1em;
+    padding: 0;
+    padding-bottom: 0;
+    background-color: rgb(22, 25, 43);
+    background-color: rgb(12, 14, 24);
+    color: hsl(207, 32%, 11%);
+    box-shadow: 0.2em 0.5em 1em rgba(0, 0, 0, 0.1);
+    border: 0.1px;
+}
+
+.card>img {
+    width: 100%;
+}
+
+.card .div-title-header{
+    margin-top: 10px;
+    padding: 5px 0 10px 10px
+}
+
+.title-header{
+    color: #aaaaaa;
+}
+
+.card p {
+    margin-bottom: 0;
+    padding: 4px;
+    padding-left: 12px;
+    color: #ddd;
+}
+
+.card p .title {
+    font-weight: bolder;
+}
+
+.card p .title-content {
+    font-weight: 450;
+    font-style: italic;
+}
+.card p span + span {
+  margin-left: 5px;
+}
+
+
+i {
+    flex: 1 1 350px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    max-width: 400px;
+    margin-bottom: 1em;
+}

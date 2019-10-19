@@ -1,0 +1,32 @@
+<div class=" main">
+    <h3>Popular Movies</h3>
+    <div class="mov-group" *ngIf="movies && movies.length">
+        <div class="flyin-grid__item card" *ngFor="let movie of movies">
+            <img src="../../assets/images/2014_teenage_mutant_ninja_turtles_movie-3840x2160.jpg" alt="a chicken" />
+            <div class="details">
+                <div class="div-title-header">
+                    <h4 class="title-header" >{{movie.Title}}</h4>
+                </div>
+
+                <p>
+                    <span class="title">Title: </span>
+                    <span class="title-content">{{movie.Title}}</span>
+                </p>
+
+                <p>
+                    <span class="title">Date: </span>
+                    <span class="title-content">{{movie.Released}}</span>
+                </p>
+
+                <p>
+                    <span class="title">Rated: </span>
+                    <span class="title-content">{{movie.Rated}}</span>
+                </p>
+            </div>
+
+        </div>
+        <i aria-hidden="true"></i>
+        <i aria-hidden="true"></i>
+        <i aria-hidden="true"></i>
+    </div>
+</div>

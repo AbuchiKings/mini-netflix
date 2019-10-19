@@ -4,6 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
   <app-hd></app-hd>
+  <main>
+    <mv></mv>
+  </main>
   `
 })
 export class AppComponent {
