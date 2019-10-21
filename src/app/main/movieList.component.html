@@ -1,11 +1,13 @@
 <div class=" main">
     <h3>Popular Movies</h3>
     <div class="mov-group" *ngIf="movies && movies.length">
-        <div class="flyin-grid__item card" *ngFor="let movie of movies">
+        <div class="flyin-grid__item card" *ngFor="let movie of filteredMovies">
             <img src="../../assets/images/2014_teenage_mutant_ninja_turtles_movie-3840x2160.jpg" alt="a chicken" />
             <div class="details">
                 <div class="div-title-header">
-                    <h4 class="title-header" >{{movie.Title}}</h4>
+                    <h4 class="title-header">{{movie.Title}}</h4>
+                    <span [class.starred]='favourites.includes(movie.imdbID)' id="{{movie.imdbID}}"
+                        title="Click to add to favourites" class="star" (click)="handleChanges($event.target)"> &#11088;</span>
                 </div>
 
                 <p>

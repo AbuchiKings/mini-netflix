@@ -43,11 +43,26 @@
 
 .card .div-title-header{
     margin-top: 10px;
-    padding: 5px 0 10px 10px
+    padding: 5px 3px 5px 10px
 }
 
 .title-header{
     color: #aaaaaa;
+    width: fit-content;
+    display: inline-block;
+}
+
+.star{
+    font-size: 22px;
+    padding: 3px;
+    margin-left: auto;
+    color: #bbbbbb;
+    cursor: pointer;
+}
+
+span.starred{
+    color: rgb(255, 153, 0);
+font-size: 23px
 }
 
 .card p {
