@@ -7,7 +7,6 @@
     padding: 5px 5px 8px;
     border-bottom: 3px solid #bbbbbb;
     width: fit-content;
-
 }
 
 .mov-group {
@@ -20,10 +19,11 @@
 }
 
 .flyin-grid__item {
-    flex: 1 1 350px;
+    flex: 1 1 260px;
     margin-left: 0.5em;
     margin-right: 0.5em;
-    max-width: 400px;
+    max-width: 260px;
+    min-width: 260px;
 }
 
 .card {
@@ -35,34 +35,39 @@
     color: hsl(207, 32%, 11%);
     box-shadow: 0.2em 0.5em 1em rgba(0, 0, 0, 0.1);
     border: 0.1px;
+    position: relative;
 }
 
 .card>img {
     width: 100%;
 }
 
-.card .div-title-header{
-    margin-top: 10px;
+.details{
+    position: relative;
+    margin-bottom: 45px;
+}
+.card .div-title-header {
     padding: 5px 3px 5px 10px
 }
 
-.title-header{
+.title-header {
     color: #aaaaaa;
     width: fit-content;
     display: inline-block;
+    font-size: 13.5px;
 }
 
-.star{
-    font-size: 22px;
+.star {
+    font-size: 20px;
     padding: 3px;
     margin-left: auto;
     color: #bbbbbb;
     cursor: pointer;
 }
 
-span.starred{
+span.starred {
     color: rgb(255, 153, 0);
-font-size: 23px
+    font-size: 23px
 }
 
 .card p {
@@ -80,15 +85,31 @@ font-size: 23px
     font-weight: 450;
     font-style: italic;
 }
-.card p span + span {
-  margin-left: 5px;
+
+.card p span+span {
+    margin-left: 5px;
 }
 
+.details-btn {
+    color: white;
+    background-color: rgb(53, 6, 6);
+    border: none;
+    padding: 10px;
+    font-weight: 500;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.details-btn:hover {
+    background-color: white;
+    color: rgb(53, 6, 6);
+}
 
 i {
-    flex: 1 1 350px;
+    flex: 1 1 260px;
     margin-left: 0.5em;
     margin-right: 0.5em;
-    max-width: 400px;
+    max-width: 260px;
     margin-bottom: 1em;
 }

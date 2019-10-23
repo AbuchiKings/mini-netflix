@@ -1,0 +1,112 @@
+<div class="main-container" *ngIf="movie && movie.Title">
+    <div class="title-header">
+        <h2 class="title">{{movie.Title}}</h2>
+
+        <span title="Add or remove favourite" class="star">
+            &#11088;</span>
+    </div>
+
+    <div class="flex-container">
+        <div class="top-container flex-item image-container">
+
+            <div class="img-fluid">
+                <img class="poster" src="{{movie.Poster}}" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="details-container flex-item">
+
+            <div class="details-container2">
+                <div class=" details">
+                    <div class="fit-content">
+                        <div class="details-div">
+                            <p><span class="detail-title">Directors:</span>
+                                <span class="detail-content">{{movie.Director}}</span>
+                            </p>
+                        </div>
+                        <div class="details-div">
+                            <p><span class="detail-title">Released:</span>
+                                <span class="detail-content">{{movie.Released}}</span>
+                            </p>
+                        </div>
+                        <div class="details-div">
+                            <p><span class="detail-title">Genre:</span>
+                                <span class="detail-content">{{movie.Genre}}</span>
+                            </p>
+                        </div>
+                        <div class="details-div">
+                            <p><span class="detail-title">Produced By:</span>
+                                <span class="detail-content">{{movie.Production}}</span>
+                            </p>
+                        </div>
+                        <div class="details-div">
+                            <p><span class="detail-title">Rated:</span>
+                                <span class="detail-content">{{movie.Rated}}</span>
+                            </p>
+                        </div>
+                        <div class="details-div">
+                            <p><span class="detail-title">Runtime:</span>
+                                <span class="detail-content">{{movie.Runtime}}</span>
+                            </p>
+                        </div>
+                        <div class="details-div">
+                            <p><span class="detail-title">Actors:</span>
+                                <span class="detail-content">{{movie.Actors}}</span>
+                            </p>
+                        </div>
+                        <div class="details-div">
+                            <p><span class="detail-title">Country:</span>
+                                <span class="detail-content">{{movie.Country}}</span>
+                            </p>
+                        </div>
+                        <div class="details-div">
+                            <p><span class="detail-title">Language:</span>
+                                <span class="detail-content">{{movie.Language}}</span>
+                            </p>
+                        </div>
+                        <div class="details-div">
+                            <p><span class="detail-title">Metascore:</span>
+                                <span class="detail-content">{{movie.Metascore}}</span>
+                            </p>
+                        </div>
+                        <div class="details-div">
+                            <p><span class="detail-title">IMDB Rating:</span>
+                                <span class="detail-content">{{movie.imdbRating}}</span>
+                            </p>
+                        </div>
+                        <div class="details-div">
+                            <p><span class="detail-title">Awards:</span>
+                                <span class="detail-content">{{movie.Awards}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ratings-container" *ngIf="movie.Ratings && movie.Ratings.length > 0">
+                    <h3 class="rating-header">Ratings</h3>
+                    <div class="ratings" >
+                        <p class="rating" *ngFor="let rating of movie.Ratings"><span class="scor">{{rating.Value}} - </span>{{rating.Source}}</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="plot-container" *ngIf="movie.Plot">
+                <h3>Plot
+
+                </h3>
+                <div>
+                    <p class="plot">{{movie.Plot}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="btn-wrapper">
+        <button class="back-btn" (click)="back()"> Back</button>
+    </div>
+</div>

@@ -1,0 +1,175 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+.main-container {
+    padding: 20px;
+    box-shadow: 0.2em 0.5em 1em rgba(0, 0, 0, 0.1);
+    border: 0.1px;
+    max-width: 1400px;
+    color: white;
+}
+
+.title-header{
+    margin-top: 25px;
+    margin-bottom: 30px;
+    margin: 25px auto 30px;
+    text-align: center;
+    color: #aaaaaa;
+    padding: 5px 5px 3px;
+    border-bottom: 3px solid #bbbbbb;
+    width: fit-content;
+    font-size: 20px;
+}
+
+.title {
+    display: inline-block;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 1rem;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.flex-item.image-container {
+    flex: 1 1 300px;
+    max-width: 600px;
+}
+
+.flex-item {
+    margin-bottom: 1em;
+    padding: 0;
+    padding-bottom: 0;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.top-container {
+    padding: 20px 10px;
+}
+
+.top-container>div {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.poster {
+    max-width: 100%;
+}
+
+.details-container {
+    flex: 3 1 300px;
+    padding: 20px 10px;
+    max-width: 800px;
+}
+
+.details-container2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.details, .ratings-container {
+    margin: 0 10px;
+}
+
+.details .fit-content {
+    margin: auto;
+    width: fit-content;
+}
+
+.fit-content div+div {
+    margin-top: 15px;
+}
+
+p span.detail-title {
+    font-weight: 600;
+    color: #cccccc;
+    font-size: 1em;
+
+
+}
+
+p span.detail-content {
+    font-style: italic;
+
+}
+
+.details-div p span+span {
+    margin-left: 8px;
+}
+
+
+div.plot-container {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.plot-container h3, .ratings-container h3 {
+    font-size: 20px;
+    color: #aaaaaa;
+
+}
+
+.btn-wrapper{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.back-btn {
+    color: white;
+    background-color: rgb(53, 6, 6);
+    border: none;
+    padding: 10px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    width: 80px;
+
+    border: 1px solid rgb(53, 6, 6);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+
+.back-btn:hover {
+    background-color: white;
+    color: rgb(53, 6, 6);
+}
+
+@media(max-width: 500px){
+
+    .main-container{
+        padding-left: 10px;
+        padding-right: 10px
+    }
+.flex-container{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+    .details, .ratings-container {
+        margin: 0;
+    }
+
+    div.plot-container {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 5px;
+    }
+}
