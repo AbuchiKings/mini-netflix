@@ -5,8 +5,8 @@ import { slideInAnimation } from './app.animation';
   selector: 'app-root',
   template: `
   <app-hd></app-hd>
-  <main   [@slideInAnimation]="o.isActive ? o.activatedRoute : '' ">
-    <router-outlet #o ="outlet"></router-outlet>
+  <main>
+    <router-outlet></router-outlet>
   </main>
   `,
   animations: [slideInAnimation]
