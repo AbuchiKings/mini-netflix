@@ -18,7 +18,7 @@ export class MovieListResolver implements Resolve<MovieListResolved>{
         return this.movieservice.getMovies().pipe(
             map(movies => ({ movies })),
             catchError(error => {
-                const message = `Movie retrieval error: ${error}`;
+                const message = `Movie retrieval error: ${error.message}`;
                 console.log(message);
                 return of({ movies: null, error: message })
             })

@@ -20,8 +20,6 @@ header.header {
     font-weight: bold;
 }
 
-
-
 #navbarNav ul {
     margin-left: auto;
     margin-right: 0;
@@ -31,20 +29,18 @@ header.header {
     color: #ddd;
     padding: 5px;
     font-weight: bold;
-   background-color: rgb(53, 6, 6) ;
-   background-color: rgb(0, 0, 0, 0.5) ;
-
-
+    background-color: rgb(53, 6, 6);
+    background-color: rgb(0, 0, 0, 0.5);
 }
-#home.active, #favourites.active{
-    color: rgb(53, 6, 6); 
- }
+
+#home.active, #favourites.active {
+    color: rgb(126, 11, 11);
+}
+
 #login:hover, #home:hover, #favourites:hover {
     background-color: rgb(53, 6, 6);
     color: white;
 }
-
-
 
 a {
     color: white;
@@ -96,8 +92,8 @@ input.form-control {
     margin-left: auto!important;
 }
 
-@media(max-width: 768px){
-    .header{
+@media(max-width: 768px) {
+    .header {
         background-position: center;
     }
 }
