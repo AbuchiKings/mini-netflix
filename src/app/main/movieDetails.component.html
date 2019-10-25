@@ -1,9 +1,10 @@
 <div class="main-container" *ngIf="movie && movie.Title">
     <div class="title-header">
-        <h2 class="title">{{movie.Title}}</h2>
+        <h2 class="title">{{pageTitle}}</h2>
 
-        <span title="Add or remove favourite" class="star">
-            &#11088;</span>
+        <span [class.starred]='favourites.includes(movie.imdbID)' id="{{movie.imdbID}}"
+        title="Add or remove favourite" class="star" (click)="handleChanges($event.target)">
+        &#11088;</span>
     </div>
 
     <div class="flex-container">
@@ -107,6 +108,6 @@
         </div>
     </div>
     <div class="btn-wrapper">
-        <button class="back-btn" (click)="back()"> Back</button>
+        <button class="back-btn" (click)="back()">&#10913; Back</button>
     </div>
 </div>

@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-
 a {
     color: inherit;
     text-decoration: none;
@@ -18,7 +17,7 @@ a:hover, a:focus {
     color: white;
 }
 
-.title-header{
+.title-header {
     margin-top: 25px;
     margin-bottom: 30px;
     margin: 25px auto 30px;
@@ -32,6 +31,19 @@ a:hover, a:focus {
 
 .title {
     display: inline-block;
+}
+
+.star {
+    font-size: 20px;
+    padding: 3px;
+    margin-left: auto;
+    color: #bbbbbb;
+    cursor: pointer;
+}
+
+span.starred {
+    color: rgb(255, 153, 0);
+    font-size: 23px
 }
 
 .flex-container {
@@ -99,19 +111,15 @@ p span.detail-title {
     font-weight: 600;
     color: #cccccc;
     font-size: 1em;
-
-
 }
 
 p span.detail-content {
     font-style: italic;
-
 }
 
 .details-div p span+span {
     margin-left: 8px;
 }
-
 
 div.plot-container {
     padding: 10px;
@@ -121,10 +129,9 @@ div.plot-container {
 .plot-container h3, .ratings-container h3 {
     font-size: 20px;
     color: #aaaaaa;
-
 }
 
-.btn-wrapper{
+.btn-wrapper {
     margin-top: 15px;
     text-align: center;
 }
@@ -137,7 +144,6 @@ div.plot-container {
     font-weight: 500;
     margin-bottom: 10px;
     width: 80px;
-
     border: 1px solid rgb(53, 6, 6);
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -146,27 +152,23 @@ div.plot-container {
     -o-border-radius: 4px;
 }
 
-
 .back-btn:hover {
     background-color: white;
     color: rgb(53, 6, 6);
 }
 
-@media(max-width: 500px){
-
-    .main-container{
+@media(max-width: 500px) {
+    .main-container {
         padding-left: 10px;
         padding-right: 10px
     }
-.flex-container{
-    margin-left: 0;
-    margin-right: 0;
-}
-
+    .flex-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
     .details, .ratings-container {
         margin: 0;
     }
-
     div.plot-container {
         padding-left: 0px;
         padding-right: 0px;

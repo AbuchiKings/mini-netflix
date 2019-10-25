@@ -28,20 +28,23 @@ header.header {
 }
 
 #login, #home, #favourites {
-    color: #ddd ;
+    color: #ddd;
     padding: 5px;
     font-weight: bold;
    background-color: rgb(53, 6, 6) ;
+   background-color: rgb(0, 0, 0, 0.5) ;
 
 
 }
+#home.active, #favourites.active{
+    color: rgb(53, 6, 6); 
+ }
 #login:hover, #home:hover, #favourites:hover {
-    color: rgb(53, 6, 6) ;
-    border: 1px solid rgb(53, 6, 6) ;
-    background-color: #ddd;
-
-
+    background-color: rgb(53, 6, 6);
+    color: white;
 }
+
+
 
 a {
     color: white;

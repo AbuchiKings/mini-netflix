@@ -1,9 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { MovieListService } from '../services/movieList.service';
 import { FavouritesService } from '../services/favourites.service';
-import { UserInputService } from '../services/message.service';
-import { IMovie } from '../shared/movie.model';
-import { MoviesService } from '../services/movies.service';
+import { UserInputService } from '../services/search.service';
+import { IMovie, MovieListResolved } from '../shared/movie.model';
+import { Router, ActivatedRoute, UrlSegment } from '@angular/router';
 
 @Component({
     selector: 'mv',
@@ -14,7 +13,8 @@ import { MoviesService } from '../services/movies.service';
 export class MovieListComponent implements OnInit {
     constructor(private favouritesService: FavouritesService,
         private message: UserInputService,
-        private movieService: MoviesService) {
+        private route: ActivatedRoute,
+        private router: Router) {
     }
 
     errorMsg: any
@@ -26,10 +26,22 @@ export class MovieListComponent implements OnInit {
 
     movies: IMovie[]
 
+    pageTitle: string;
+
+    returnLink: UrlSegment = this.route.snapshot.url[0];
+    
+
     handleChanges(target: any): void {
         this.favouritesService.toggleFavourites(target, this.favourites)
     }
 
+    more(target: any): void {
+        this.router.navigate(['/movies', target.id],
+            {
+                queryParams: { r: this.returnLink }
+            }
+        );
+    }
 
     performFilter(filterBy: string): any {
         filterBy = filterBy.toLocaleLowerCase();
@@ -41,12 +53,21 @@ export class MovieListComponent implements OnInit {
     }
 
 
-    ngOnInit(): void {
-        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-        //Add 'implements OnInit' to the class.
-        this.movies = this.movieService.getMovies()
-
+    mapMovies(movies: IMovie[], error?: any): void {
+        this.movies = movies;
         this.filteredMovies = this.movies;
+
+        if (this.movies) {
+            this.pageTitle = 'Popular Movies'
+        } else {
+            this.pageTitle = `Error: ${error}`;
+        }
+    }
+
+    ngOnInit(): void {
+  
+        const resolvedMovies: MovieListResolved = this.route.snapshot.data['resolvedMovies'];
+        this.mapMovies(resolvedMovies.movies, resolvedMovies.error);
 
 
         let input: Element = document.querySelector('.form-control');

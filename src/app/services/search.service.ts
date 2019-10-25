@@ -4,5 +4,6 @@ import { Injectable } from "@angular/core";
     providedIn: 'root'
 })
 export class UserInputService {
-    searchText: string = ''
+    searchText: string = '';
+    initRoute: any = ''
 }

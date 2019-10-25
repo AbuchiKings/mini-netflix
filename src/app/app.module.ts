@@ -12,13 +12,18 @@ import { HeaderComponent } from './header/header.component';
 import { MovieListComponent } from './main/movieList.component';
 import { MovieDetailsComponent } from './main/movieDetails.component';
 import { MovieDetailsGuard } from './services/movie-details.guard';
+import { FavouritMoviesComponent } from './main/favourites.component';
+import { UserInputService } from './services/search.service';
+import { MovieResolver } from './services/movie-resolver.service';
+import { MovieListResolver } from './services/movieList-resolver.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MovieListComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    FavouritMoviesComponent
   ],
 
 
@@ -26,8 +31,21 @@ import { MovieDetailsGuard } from './services/movie-details.guard';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: 'home', component: MovieListComponent },
-      {path: 'home/movies/:id', canActivate: [MovieDetailsGuard], component: MovieDetailsComponent},
+      {
+        path: 'home', component: MovieListComponent,
+        resolve: { resolvedMovies: MovieListResolver }
+      },
+
+      {
+        path: 'favourites', component: FavouritMoviesComponent,
+        resolve: { resolvedMovies: MovieListResolver }
+      },
+
+      {
+        path: 'movies/:id', canActivate: [MovieDetailsGuard], component: MovieDetailsComponent,
+        resolve: { resolvedMovie: MovieResolver }
+      },
+
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: 'home', pathMatch: 'full' },
 

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import {  UserInputService } from '../services/message.service';
+import {  UserInputService } from '../services/search.service';
 
 @Component({
     selector: 'app-hd',

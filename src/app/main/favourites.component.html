@@ -1,5 +1,5 @@
-<div class=" main">
-    <h3>{{pageTitle}}</h3>
+<div class=" main favourites">
+    <h3 [class.borderLess]="favouritesEmpty">{{pageTitle}}</h3>
     <div class="mov-group" *ngIf="movies && movies.length">
 
         <div class="flyin-grid__item card" *ngFor="let movie of filteredMovies">
@@ -23,7 +23,8 @@
                     <span class="title-content">{{movie.Rated}}</span>
                 </p>
             </div>
-            <button class="details-btn" (click)="more($event.target)" id="{{movie.imdbID}}">More...</button>
+            <button class="details-btn" (click)="more($event.target)"
+             id="{{movie.imdbID}}" >More...</button>
         </div>
 
         <i aria-hidden="true"></i>
