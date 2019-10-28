@@ -16,11 +16,11 @@ header.header {
     margin-top: -1px;
     margin-bottom: 5px;
     font-size: 20px;
-    color: #ddd;
+    color:rgb(22, 25, 43);
     font-weight: bold;
 }
 
-.navbar-light .navbar-toggler{
+.navbar-light .navbar-toggler {
     color: black;
     background-color: white;
 }
