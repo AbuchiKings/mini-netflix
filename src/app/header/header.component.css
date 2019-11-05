@@ -16,13 +16,15 @@ header.header {
     margin-top: -1px;
     margin-bottom: 5px;
     font-size: 20px;
-    color:rgb(22, 25, 43);
+    color: rgb(22, 25, 43);
     font-weight: bold;
 }
 
 .navbar-light .navbar-toggler {
-    color: black;
     background-color: white;
+}
+.navbar-light .navbar-toggler-icon {
+    color: white !important;
 }
 
 #navbarNav ul {
