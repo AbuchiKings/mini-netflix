@@ -42,13 +42,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Installation
 
 * Install [NodeJs](https://nodejs.org/en/download/) on your computer.
-* git clone [iReporter](https://github.com/AbuchiKings/mini-netflix.git)
+* git clone [https://github.com/AbuchiKings/mini-netflix.git](https://github.com/AbuchiKings/mini-netflix.git)
 * Run npm install to install packages
 
 
 ### Development Server
 
-* Run ng serve start to start the server
+* Run `ng serve` start to start the server
 * Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
